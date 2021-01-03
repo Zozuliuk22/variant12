@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\Variants\Variant12\Variant12\bin\Debug\Variant12.exe
+C:\Users\user\Desktop\Variants\Variant12\Variant12\bin\Debug\Variant12.pdb
+C:\Users\user\Desktop\Variants\Variant12\Variant12\bin\Debug\MyFunctions.dll
+C:\Users\user\Desktop\Variants\Variant12\Variant12\bin\Debug\MyFunctions.pdb
+C:\Users\user\Desktop\Variants\Variant12\Variant12\obj\x86\Debug\Variant12.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Variants\Variant12\Variant12\obj\x86\Debug\Variant12.exe
+C:\Users\user\Desktop\Variants\Variant12\Variant12\obj\x86\Debug\Variant12.pdb

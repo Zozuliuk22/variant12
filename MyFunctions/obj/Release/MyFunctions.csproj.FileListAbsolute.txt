@@ -1,0 +1,4 @@
+C:\Users\user\Desktop\Variants\Variant12\MyFunctions\bin\Release\MyFunctions.dll
+C:\Users\user\Desktop\Variants\Variant12\MyFunctions\bin\Release\MyFunctions.pdb
+C:\Users\user\Desktop\Variants\Variant12\MyFunctions\obj\Release\MyFunctions.dll
+C:\Users\user\Desktop\Variants\Variant12\MyFunctions\obj\Release\MyFunctions.pdb
