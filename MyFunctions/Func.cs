@@ -31,6 +31,7 @@ namespace MyFunctions
             for (int i = 0; i < temp.Length; i++)
             { 
                 str += Convert.ToInt64(temp[i], 2) + " ";   //переводимо з двійкової в десяткову
+                //str += Func.BinToDecFormula(temp[i], 2) + " "; 
                 count_temp+=1;                              //рахуємо кількість чисел в строці
             }
             str_temp = str.Remove(str.Length - 1);  //видаляємо зайвий пробіл в кінці строки
@@ -180,6 +181,15 @@ namespace MyFunctions
             for (int i = 0; i < key; i++)  //і - індекс символа строки
                 rezult += str[i];  //додаємо поки не дойдемо до вказаного користувачем індексом символа
             return rezult; //повертаємо результат обрізаної строки
+        }
+
+        public static int BinToDecFormula(string str, int type) //формула переведення з двійкової системи числення в десяткову
+        {           
+            int rezult = 0; //результат перетворення
+            for (int i = str.Length - 1; i >= 0; i--) //i - степінь в формулі
+                rezult += (int)Math.Pow(type, i) * Convert.ToInt32(Convert.ToString(str[str.Length - i - 1])); //формула переведення https://ru.wikihow.com/%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D1%8C-%D0%B8%D0%B7-%D0%B4%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B9-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B-%D0%B2-%D0%B4%D0%B5%D1%81%D1%8F%D1%82%D0%B8%D1%87%D0%BD%D1%83%D1%8E
+
+            return rezult; //повертаємо результат
         }
 
     }
