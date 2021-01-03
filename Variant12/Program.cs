@@ -6,7 +6,7 @@ namespace Variant12
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
             int countStrings = Func.GetNumber("Введiть кiлькiсть рядкiв"); //отримання кількості рядків у масиві рядків
 
             string[] arrayStrings = new string[countStrings]; //створюємо масив рядків, введених з клавіатури
