@@ -119,13 +119,14 @@ namespace MyFunctions
                         if (Math.Abs(matrix[i, k]) <= Math.Abs(matrix[i, k + 1]))  //перевірка по модулю
                             count_true += 1;
                     }
+                    Console.WriteLine("first check");
                 }
             }
 
             count_true = 0;  //обнулили
             int[] tempArray = new int[cols];  //тимчасовий рядок 
 
-            while (count_true != cols - 1)  //поки не відсортуємо рядки
+            while (count_true != rows - 1)  //поки не відсортуємо рядки
             {
                 count_true = 0; //обнулили
                 for (int i = 0; i < rows-1; i++)  //рухаємось по рядках
@@ -146,6 +147,7 @@ namespace MyFunctions
                     if (Math.Abs(matrix[k, 0]) <= Math.Abs(matrix[k+1, 0]))  //перевірка по модулю за першим елементом
                         count_true += 1;
                 }
+                Console.WriteLine("second check");
             }
         }
 
@@ -191,6 +193,8 @@ namespace MyFunctions
 
             return rezult; //повертаємо результат
         }
+
+
 
     }
 }
