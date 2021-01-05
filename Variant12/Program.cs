@@ -21,6 +21,10 @@ namespace Variant12
 
             Func.PrintMatrix(matrix, countStrings, width); //виводимо матрицю
 
+            Func.MatrixFullSort(ref matrix, countStrings, width); //повне сортування матриці
+
+            Func.PrintMatrix(matrix, countStrings, width); //виводимо матрицю
+
             Console.ReadKey();  //щоб консольне вікно не закривалось зразу
         }
     }

@@ -119,7 +119,6 @@ namespace MyFunctions
                         if (Math.Abs(matrix[i, k]) <= Math.Abs(matrix[i, k + 1]))  //перевірка по модулю
                             count_true += 1;
                     }
-                    Console.WriteLine("first check");
                 }
             }
 
@@ -146,8 +145,7 @@ namespace MyFunctions
                 {
                     if (Math.Abs(matrix[k, 0]) <= Math.Abs(matrix[k+1, 0]))  //перевірка по модулю за першим елементом
                         count_true += 1;
-                }
-                Console.WriteLine("second check");
+                }                
             }
         }
 
@@ -194,7 +192,10 @@ namespace MyFunctions
             return rezult; //повертаємо результат
         }
 
+        public static void MatrixFullSort(ref int [,] matrix, int rows, int cols)
+        {
 
+        }
 
     }
 }

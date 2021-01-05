@@ -125,7 +125,7 @@ namespace MyFunctions
             count_true = 0;  //обнулили
             int[] tempArray = new int[cols];  //тимчасовий рядок 
 
-            while (count_true != cols - 1)  //поки не відсортуємо рядки
+            while (count_true != rows - 1)  //поки не відсортуємо рядки
             {
                 count_true = 0; //обнулили
                 for (int i = 0; i < rows-1; i++)  //рухаємось по рядках
@@ -145,7 +145,7 @@ namespace MyFunctions
                 {
                     if (Math.Abs(matrix[k, 0]) <= Math.Abs(matrix[k+1, 0]))  //перевірка по модулю за першим елементом
                         count_true += 1;
-                }
+                }                
             }
         }
 
@@ -190,6 +190,11 @@ namespace MyFunctions
                 rezult += (int)Math.Pow(type, i) * Convert.ToInt32(Convert.ToString(str[str.Length - i - 1])); //формула переведення https://ru.wikihow.com/%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D1%8C-%D0%B8%D0%B7-%D0%B4%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B9-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B-%D0%B2-%D0%B4%D0%B5%D1%81%D1%8F%D1%82%D0%B8%D1%87%D0%BD%D1%83%D1%8E
 
             return rezult; //повертаємо результат
+        }
+
+        public static void MatrixFullSort(ref int [,] matrix, int rows, int cols)
+        {
+
         }
 
     }
