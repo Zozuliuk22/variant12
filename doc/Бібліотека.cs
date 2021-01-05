@@ -29,7 +29,7 @@ namespace MyFunctions
  
             string str = "";                //записуємо результат чисел у десятковій системі
             for (int i = 0; i < temp.Length; i++)
-            { 
+            {
                 str += Convert.ToInt64(temp[i], 2) + " ";   //переводимо з двійкової в десяткову
                 //str += Func.BinToDecFormula(temp[i], 2) + " "; 
                 count_temp+=1;                              //рахуємо кількість чисел в строці
@@ -192,8 +192,38 @@ namespace MyFunctions
             return rezult; //повертаємо результат
         }
 
-        public static void MatrixFullSort(ref int [,] matrix, int rows, int cols)
+        public static void MatrixFullSort(ref int [,] matrix, int rows, int cols) //повне сортування елементів матриці по модулю
         {
+            int [] tempArr = new int[rows*cols];  //масив в який будуть записані усі значення в одну строку
+            for (int i = 0; i < rows; i++)  //і - індекс рядків матриці
+            {
+                for (int j = 0; j < cols; j++)  //j - індекс стовпчиків матриці
+                    tempArr[i*cols + j] = matrix[i, j];  //ініціалізуємо масив temp
+            }
+
+            int count_true = 0;  //кількість правильно розставлених пар елементів
+            while (count_true != rows * cols - 1)   //поки масив повністю не відсортовано
+            {
+                count_true = 0;  //обнулили
+                for (int i = 0; i < rows * cols-1; i++)  //і - індекс одновимірного масиву
+                {
+                    if (Math.Abs(tempArr[i]) > Math.Abs(tempArr[i + 1]))  //перевірка правильно розставленої пари чисел
+                    {
+                        int temp = tempArr[i];         //через проміжну змінну міняємо значення місцями
+                        tempArr[i] = tempArr[i + 1];
+                        tempArr[i + 1] = temp;
+                    }
+                }
+                for (int i = 0; i < rows * cols - 1; i++)  //і - індекс масива temp
+                    if (Math.Abs(tempArr[i]) <= Math.Abs(tempArr[i + 1]))  //перевірка на правильність розставлених чисел в парі
+                        count_true += 1;
+            }
+
+            for (int i = 0; i < rows; i++)   //і - індекс рядків матриці
+            {
+                for (int j = 0; j < cols; j++)  //j - індекс стовпчиків матриці
+                    matrix[i, j] = tempArr[i * cols + j];  //заповнення матриці
+            }
 
         }
 

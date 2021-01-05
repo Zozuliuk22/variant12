@@ -17,9 +17,9 @@ namespace Variant12
 
             Func.PrintMatrix(matrix, countStrings, width); //виводимо матрицю
 
-            Func.MatrixSort(ref matrix, countStrings, width); //сортуємо матрицю за елементами за зростанням
+            //Func.MatrixSort(ref matrix, countStrings, width); //сортуємо матрицю за елементами за зростанням
 
-            Func.PrintMatrix(matrix, countStrings, width); //виводимо матрицю
+            //Func.PrintMatrix(matrix, countStrings, width); //виводимо матрицю
 
             Func.MatrixFullSort(ref matrix, countStrings, width); //повне сортування матриці
 
